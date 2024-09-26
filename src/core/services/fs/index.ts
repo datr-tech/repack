@@ -1,0 +1,11 @@
+export { dirService } from './dirService';
+export { fileService } from './fileService';
+export { fileServiceJSON } from './fileServiceJSON';
+export { getExtension } from './getExtension';
+export { getPathServiceByType } from './getPathServiceByType';
+export { getPathType } from './getPathType';
+export { isDir } from './isDir';
+export { isFile } from './isFile';
+export { isJSON } from './isJSON';
+export { isPath } from './isPath';
+export { pathService } from "./pathService";

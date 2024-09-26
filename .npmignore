@@ -1,0 +1,6 @@
+./.husky
+./coverage
+./node_modules
+./src
+./test
+./tickets

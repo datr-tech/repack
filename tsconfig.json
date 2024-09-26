@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": ".",
+      "esModuleInterop": true,
+      "lib": ["es6"],
+      "moduleResolution": "node",
+      "outDir": "dist",
+      "target": "esnext",
+      "resolveJsonModule": true,
+      "sourceMap": true,
+      "paths": {
+        "@repack/*": ["./src/*"],
+        "@repacktest/*": ["./test/*"],
+      }
+    },
+    "exclude": [
+      "node_modules",
+      "dist"
+    ],
+    "include": [
+      "./src/**/*.ts",
+      "./tests/**/*.ts"
+    ],
+    "files": [
+      "src/index.ts"
+    ]
+  }

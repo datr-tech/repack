@@ -1,0 +1,62 @@
+{
+  "name": "repack",
+  "description": "A TypeScript CLI for repacking packages",
+  "version": "0.1.0",
+  "main": "./dist/repack.cjs",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "analysis": "npx fta ./",
+    "analysis:json": "npm run analysis -- --format json",
+    "clean": "npx rimraf coverage/* dist/*",
+    "lint": "npx eslint --config ./eslint.config.mjs --fix",
+    "format:base": "npx prettier --config ./.prettierrc './src/**/*.ts' './test/**/*.ts'",
+    "format:check": "npm run format:base -- --check",
+    "format:write": "npm run format:base -- --write",
+    "format": "npm run format:write",
+    "build": "npx webpack --mode production",
+    "start": "node ./dist/repack.cjs",
+    "dev": "npx tsx ./src/index.ts",
+    "test:unit": "npx jest ./test/unit --coverage=false",
+    "test:unit:cov": "npm run test:unit -- --coverage",
+    "test:unit:changed": "npm run test:unit -- -o",
+    "test": "npm run test:unit:cov",
+    "prepare": "husky",
+    "pre-push": "npx npm-run-all -r lint format test analysis build"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.24.7",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/format": "^19.5.0",
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.10.0",
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.13",
+    "commitlint": "^19.5.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "fta-cli": "^2.0.0",
+    "husky": "^9.1.6",
+    "jest": "^29.7.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.2.5",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.6.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@types/node": "^22.5.5",
+    "commander": "^12.1.0",
+    "winston": "^3.14.2"
+  }
+}

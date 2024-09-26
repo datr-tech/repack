@@ -1,0 +1,6 @@
+.idea
+.jest
+analysis
+coverage
+dist
+node_modules

@@ -1,0 +1,1 @@
+export { dirArgument } from './dirArgument';

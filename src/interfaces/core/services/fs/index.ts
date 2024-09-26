@@ -1,0 +1,17 @@
+export { IDirService } from './IDirService';
+export { IDirServiceOutput } from './IDirServiceOutput';
+export { IFileService } from './IFileService';
+export { IFileServiceOutput } from './IFileServiceOutput';
+export { IFuncGetExtension } from './IFuncGetExtension';
+export { IFuncGetPath } from './IFuncGetPath';
+export { IFuncGetPathServiceByType } from './IFuncGetPathServiceByType';
+export { IFuncGetPathServiceByTypeOutput } from './IFuncGetPathServiceByTypeOutput';
+export { IFuncGetPathType } from './IFuncGetPathType';
+export { IFuncIsDir } from './IFuncIsDir';
+export { IFuncIsFile } from './IFuncIsFile';
+export { IFuncIsPath } from './IFuncIsPath';
+export { IFuncIsJSON } from './IFuncIsJSON';
+export { IFuncRead } from './IFuncRead';
+export { IFuncValidate } from './IFuncValidate';
+export { IPathService } from './IPathService';
+export { IPathServiceOutput } from './IPathServiceOutput';

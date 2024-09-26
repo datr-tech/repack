@@ -1,0 +1,17 @@
+{
+    "output_limit": 20,
+    "score_cap": 60,
+    "exclude_directories": [
+        ".husky",
+        "coverage",
+        "dist",
+        "node_modules",
+        "test"
+    ],
+    "exclude_filenames": [
+        "./jest.config.js"
+    ],
+    "extensions": [".ts"],
+    "include_comments": false,
+    "exclude_under": 0
+  }
