@@ -1,4 +1,4 @@
-import { isFile } from '../../../../../src/core/services/fs';
+import { isFile } from '@app/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {

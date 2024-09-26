@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { IFileService } from '@repack/interfaces/core/services/fs';
+import { IFileService } from '@app/interfaces/core/services/fs';
 import { isFile } from './isFile';
 
 export const fileService: IFileService = ({ path }) => {

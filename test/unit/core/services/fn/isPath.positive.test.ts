@@ -1,4 +1,4 @@
-import { isPath } from '../../../../../src/core/services/fs';
+import { isPath } from '@app/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {

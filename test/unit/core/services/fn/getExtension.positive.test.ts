@@ -1,4 +1,4 @@
-import { getExtension } from '../../../../../src/core/services/fs';
+import { getExtension } from '@app/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {

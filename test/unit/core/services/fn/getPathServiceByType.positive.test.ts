@@ -1,10 +1,10 @@
 import { readFileSync } from 'node:fs';
-import { PathTypeEnum } from '../../../../../src/config/enums';
-import { getPathServiceByType } from '../../../../../src/core/services/fs';
+import { PathTypeEnum } from '@app/config/enums';
+import { getPathServiceByType } from '@app/core/services/fs';
 import {
   IDirServiceOutput,
   IFileServiceOutput,
-} from '../../../../../src/interfaces/core/services/fs';
+} from '@app/interfaces/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {

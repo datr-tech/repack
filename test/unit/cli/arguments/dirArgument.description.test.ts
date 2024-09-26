@@ -1,4 +1,4 @@
-import { dirArgument } from '../../../../src/cli/arguments';
+import { dirArgument } from '@app/cli/arguments';
 
 describe('cli', () => {
   describe('arguments', () => {

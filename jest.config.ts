@@ -15,6 +15,6 @@ export default {
   },
   setupFiles: ['<rootDir>/.jest/setEnvVars.js'],
   moduleNameMapper: {
-    '@repack/(.*)': '<rootDir>/src/$1',
+    '@app/(.*)': '<rootDir>/src/$1',
   },
 };

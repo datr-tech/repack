@@ -1,5 +1,5 @@
-import { PathTypeEnum } from '../../../../../src/config/enums';
-import { getPathType } from '../../../../../src/core/services/fs';
+import { PathTypeEnum } from '@app/config/enums';
+import { getPathType } from '@app/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {

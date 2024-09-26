@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
-import { fileService } from '../../../../../src/core/services/fs';
-import { IFileServiceOutput } from '../../../../../src/interfaces/core/services/fs';
+import { fileService } from '@app/core/services/fs';
+import { IFileServiceOutput } from '@app/interfaces/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {

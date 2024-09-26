@@ -1,5 +1,5 @@
 import { Argument } from 'commander';
-import { dirValidator } from '@repack/cli/validators';
+import { dirValidator } from '@app/cli/validators';
 
 export const dirArgument = new Argument(
   '<dir>',

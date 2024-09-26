@@ -1,4 +1,4 @@
-import { getPathType } from '../../../../../src/core/services/fs';
+import { getPathType } from '@app/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {

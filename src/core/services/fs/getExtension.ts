@@ -1,5 +1,5 @@
 import path from 'path';
-import { IFuncGetExtension } from '@repack/interfaces/core/services/fs';
+import { IFuncGetExtension } from '@app/interfaces/core/services/fs';
 import { isPath } from './isPath';
 
 export const getExtension: IFuncGetExtension = ({ pathStr }) => {

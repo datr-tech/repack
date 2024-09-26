@@ -14,10 +14,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run lint
-    - run: npm run format:check
-    - run: npm run analysis
-    - run: npm run test
-    - run: npm run build
+        cache: 'node'
+    - run: node ci
+    - run: node run lint
+    - run: node run format:check
+    - run: node run analysis
+    - run: node run test
+    - run: node run build

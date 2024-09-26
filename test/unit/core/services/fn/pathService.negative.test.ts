@@ -1,5 +1,5 @@
-import { PathTypeEnum } from '../../../../../src/config/enums';
-import { pathService } from '../../../../../src/core/services/fs';
+import { PathTypeEnum } from '@app/config/enums';
+import { pathService } from '@app/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {
@@ -31,17 +31,17 @@ describe('core', () => {
             expect(pathType).toBe(expected);
           });
         });
-        describe("positive: should throw an error", () => {
+        describe('positive: should throw an error', () => {
           test("when 'path' is invalid", () => {
             // Arrange
             const path = 'abc';
-            const expectedError = "path is invalid";
+            const expectedError = 'path is invalid';
 
             // Act
             const { getPathType } = pathService({ path });
             const handler = () => {
               getPathType();
-            }
+            };
 
             // Assert
             expect(handler).toThrow(expectedError);

@@ -8,4 +8,4 @@ export { isDir } from './isDir';
 export { isFile } from './isFile';
 export { isJSON } from './isJSON';
 export { isPath } from './isPath';
-export { pathService } from "./pathService";
+export { pathService } from './pathService';

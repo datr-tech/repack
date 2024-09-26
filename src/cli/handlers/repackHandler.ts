@@ -1,4 +1,4 @@
-import { logger } from '@repack/utils';
+import { logger } from '@app/utils';
 
 export const repackHandler = ({ ...args }) => {
   const path = args?.path;

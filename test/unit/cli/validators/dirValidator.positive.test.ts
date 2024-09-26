@@ -1,4 +1,4 @@
-import { dirValidator } from '../../../../src/cli/validators';
+import { dirValidator } from '@app/cli/validators';
 
 describe('cli', () => {
   describe('validators', () => {

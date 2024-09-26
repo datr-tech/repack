@@ -1,4 +1,5 @@
-import { IFuncIsJSON } from '@repack/interfaces/core/services/fs';
+import { CONSTS_FILE_EXTENSION_JSON } from '@app/config/consts';
+import { IFuncIsJSON } from '@app/interfaces/core/services/fs';
 import { getExtension } from './getExtension';
 import { isPath } from './isPath';
 
@@ -10,7 +11,7 @@ export const isJSON: IFuncIsJSON = ({ path }) => {
   }
 
   const extension = getExtension({ pathStr: path });
-  isValid = extension === '.json';
+  isValid = extension === CONSTS_FILE_EXTENSION_JSON;
 
   return isValid;
 };

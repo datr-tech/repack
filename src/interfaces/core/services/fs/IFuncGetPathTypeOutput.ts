@@ -1,3 +1,3 @@
-import { PathTypeEnum } from '@repack/config/enums';
+import { PathTypeEnum } from '@app/config/enums';
 
 export type IFuncGetPathTypeOutput = PathTypeEnum;

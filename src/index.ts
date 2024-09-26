@@ -1,9 +1,9 @@
 import { Command } from 'commander';
-import { repackCommand } from '@repack/cli/commands';
+import { repackCommand } from '@app/cli/commands';
 import {
   CONSTS_PROGRAMME_DESCRIPTION,
   CONSTS_PROGRAMME_NAME,
-} from '@repack/config/consts';
+} from '@app/config/consts';
 import packageJson from '../package.json';
 
 const program = new Command();

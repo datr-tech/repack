@@ -11,8 +11,8 @@
       "resolveJsonModule": true,
       "sourceMap": true,
       "paths": {
-        "@repack/*": ["./src/*"],
-        "@repacktest/*": ["./test/*"],
+        "@app/*": ["./src/*"],
+        "@appTest/*": ["./test/*"],
       }
     },
     "exclude": [
@@ -24,6 +24,6 @@
       "./tests/**/*.ts"
     ],
     "files": [
-      "src/index.ts"
+      "src/index.ts",
     ]
   }

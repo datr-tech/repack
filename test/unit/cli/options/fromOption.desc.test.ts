@@ -1,9 +1,9 @@
-import { fromOption } from '../../../../src/cli/options';
+import { fromOption } from '@app/cli/options';
 
 describe('cli', () => {
   describe('options', () => {
     describe('fromOption', () => {
-      describe('description', () => {
+      describe('desc', () => {
         test('should be valid', () => {
           // Arrange
           const expected = "the type of the 'from' package";

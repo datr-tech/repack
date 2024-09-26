@@ -4,9 +4,9 @@ import {
   CONSTS_COMMAND_REPACK_NAME,
   CONSTS_COMMAND_REPACK_DESCRIPTION,
   CONSTS_EMPTY_STRING,
-  CONSTS_FILE_TYPE_JSON,
+  CONSTS_FILE_EXTENSION_JSON,
   CONSTS_PERIOD_STRING,
-} from '../../../src/config/consts';
+} from '@app/config/consts';
 
 describe('config', () => {
   describe('consts', () => {
@@ -29,8 +29,8 @@ describe('config', () => {
     test('CONSTS_EMPTY_STRING', () => {
       expect(CONSTS_EMPTY_STRING).toBe('');
     });
-    test('CONSTS_FILE_TYPE_JSON', () => {
-      expect(CONSTS_FILE_TYPE_JSON).toBe('json');
+    test('CONSTS_FILE_EXTENSION_JSON', () => {
+      expect(CONSTS_FILE_EXTENSION_JSON).toBe('.json');
     });
     test('CONSTS_PERIOD_STRING', () => {
       expect(CONSTS_PERIOD_STRING).toBe('.');

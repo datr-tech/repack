@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
-import { fileServiceJSON } from '../../../../../src/core/services/fs';
-import { IFileServiceOutput } from '../../../../../src/interfaces/core/services/fs';
+import { fileServiceJSON } from '@app/core/services/fs';
+import { IFileServiceOutput } from '@app/interfaces/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {
@@ -14,11 +14,13 @@ describe('core', () => {
             const contentsExpected = JSON.parse(
               readFileSync(path, {
                 encoding: 'utf8',
-              })
+              }),
             );
 
             // Act
-            const foundService = fileServiceJSON({ path }) as IFileServiceOutput;
+            const foundService = fileServiceJSON({
+              path,
+            }) as IFileServiceOutput;
             const foundServicePath = foundService.getPath();
             const contentsFound = foundService.read() as object;
             const isValid = foundService.validate();

@@ -19,8 +19,8 @@ export default {
     extensions: ['.ts', '.js'],
     modules: ['node_modules'],
     alias: {
-      '@repack': path.resolve(__dirname, 'src/'),
-      '@repacktest': path.resolve(__dirname, 'test/'),
+      '@app': path.resolve(__dirname, 'src/'),
+      '@apptest': path.resolve(__dirname, 'test/'),
     },
   },
   target: 'node',

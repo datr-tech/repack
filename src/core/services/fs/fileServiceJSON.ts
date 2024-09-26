@@ -1,4 +1,4 @@
-import { IFileService } from '@repack/interfaces/core/services/fs';
+import { IFileService } from '@app/interfaces/core/services/fs';
 import { fileService } from './fileService';
 import { isJSON } from './isJSON';
 
@@ -12,7 +12,7 @@ export const fileServiceJSON: IFileService = ({ path }) => {
       const fileContentsJSON = JSON.parse(fileContents);
 
       return fileContentsJSON;
-    } catch(error) {
+    } catch (error) {
       const { message } = error;
       throw new Error(`parse error: ${message}`);
     }

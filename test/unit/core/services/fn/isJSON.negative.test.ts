@@ -1,4 +1,4 @@
-import { isJSON } from '../../../../../src/core/services/fs';
+import { isJSON } from '@app/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {

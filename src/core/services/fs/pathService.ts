@@ -1,4 +1,4 @@
-import { IPathService } from '@repack/interfaces/core/services/fs';
+import { IPathService } from '@app/interfaces/core/services/fs';
 import { getPathServiceByType } from './getPathServiceByType';
 import { getPathType } from './getPathType';
 

@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { IFuncIsFile } from '@repack/interfaces/core/services/fs';
+import { IFuncIsFile } from '@app/interfaces/core/services/fs';
 import { isPath } from './isPath';
 
 export const isFile: IFuncIsFile = ({ path }) => {

@@ -1,8 +1,8 @@
-import { PathTypeEnum } from '@repack/config/enums';
+import { PathTypeEnum } from '@app/config/enums';
 import {
   IFuncGetPathServiceByType,
   IFuncGetPathServiceByTypeOutput,
-} from '@repack/interfaces/core/services/fs';
+} from '@app/interfaces/core/services/fs';
 import { dirService } from './dirService';
 import { fileService } from './fileService';
 import { fileServiceJSON } from './fileServiceJSON';

@@ -1,5 +1,5 @@
-import { dirService } from '../../../../../src/core/services/fs';
-import { IDirServiceOutput } from '../../../../../src/interfaces/core/services/fs';
+import { dirService } from '@app/core/services/fs';
+import { IDirServiceOutput } from '@app/interfaces/core/services/fs';
 
 describe('core', () => {
   describe('services', () => {

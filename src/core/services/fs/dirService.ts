@@ -1,4 +1,4 @@
-import { IDirService } from '@repack/interfaces/core/services/fs';
+import { IDirService } from '@app/interfaces/core/services/fs';
 import { isDir } from './isDir';
 
 export const dirService: IDirService = ({ path }) => {

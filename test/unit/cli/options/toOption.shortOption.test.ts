@@ -1,4 +1,4 @@
-import { toOption } from '../../../../src/cli/options';
+import { toOption } from '@app/cli/options';
 
 describe('cli', () => {
   describe('options', () => {

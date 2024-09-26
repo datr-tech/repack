@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { dirValidator } from '../../../../src/cli/validators';
+import { dirValidator } from '@app/cli/validators';
 
 const rootPath = process.env.REPACK_ROOT_DIR as string;
 const packageJsonPath = path.resolve(rootPath, 'package.json');
