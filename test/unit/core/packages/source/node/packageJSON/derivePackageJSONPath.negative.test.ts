@@ -5,10 +5,10 @@ describe('core', () => {
     describe('node', () => {
       describe('packageJSON', () => {
         describe('derivePackageJSONPath', () => {
-          describe('positive: should return the expected path', () => {
-            test("when 'packageDirPath' is an invalid, non-empty string", () => {
+          describe('negative: should return the expected path', () => {
+            test("when 'packageDirPath' is an empty string", () => {
               // Arrange
-              const packageDirPath = 'abc';
+              const packageDirPath = '';
               const expectedPath = `${packageDirPath}/package.json`;
 
               // Act

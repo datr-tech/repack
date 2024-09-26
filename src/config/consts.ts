@@ -6,3 +6,4 @@ export const CONSTS_COMMAND_REPACK_DESCRIPTION =
 export const CONSTS_EMPTY_STRING = '';
 export const CONSTS_FILE_EXTENSION_JSON = '.json';
 export const CONSTS_PERIOD_STRING = '.';
+export const CONSTS_PROP_VALUE_NOT_FOUND = 'PROP_VALUE_NOT_FOUND';

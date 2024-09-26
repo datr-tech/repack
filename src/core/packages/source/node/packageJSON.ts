@@ -1,4 +1,7 @@
-import { CONSTS_FILE_EXTENSION_JSON } from '@app/config/consts';
+import {
+  CONSTS_PROP_VALUE_NOT_FOUND,
+  CONSTS_FILE_EXTENSION_JSON,
+} from '@app/config/consts';
 import { fileServiceJSON } from '@app/core/services/fs';
 import { IPackageJSON } from '@app/interfaces/core/packages/source/node';
 import { IFileServiceOutput } from '@app/interfaces/core/services/fs';
@@ -10,16 +13,17 @@ export const packageJSON: IPackageJSON = ({ packageDirPath }) => {
   const derivePackageJSONPath = ({ packageDirPath }) =>
     `${packageDirPath}/package${CONSTS_FILE_EXTENSION_JSON}`;
 
-  const getPropValue = ({ propName, defaultValue }) => {
+  const getPropValue = ({
+    propName,
+    defaultValue = CONSTS_PROP_VALUE_NOT_FOUND,
+  }) => {
     if (!hasPackageJSON) {
-      return;
+      throw new Error('json not loaded');
     }
 
-    if (typeof packageJSONRaw[propName] === 'undefined') {
-      return;
-    }
-
-    return packageJSONRaw[propName] || defaultValue;
+    return typeof packageJSONRaw[propName] !== 'undefined'
+      ? packageJSONRaw[propName]
+      : defaultValue;
   };
 
   const load = () => {

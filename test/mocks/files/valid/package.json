@@ -1,0 +1,8 @@
+{
+    "name": "abc",
+    "description": "a test description",
+    "main": "/path/to/entry/point",
+    "man": "/path/to/man/files",
+    "type": "commonjs",
+    "version": "1.0.0"
+}

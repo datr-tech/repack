@@ -20,7 +20,7 @@ export default {
     modules: ['node_modules'],
     alias: {
       '@app': path.resolve(__dirname, 'src/'),
-      '@apptest': path.resolve(__dirname, 'test/'),
+      '@appTest': path.resolve(__dirname, 'test/'),
     },
   },
   target: 'node',
