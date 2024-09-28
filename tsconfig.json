@@ -9,6 +9,7 @@
       "outDir": "dist",
       "target": "esnext",
       "resolveJsonModule": true,
+      "skipLibCheck": true,
       "sourceMap": true,
       "paths": {
         "@app/*": ["./src/*"],
