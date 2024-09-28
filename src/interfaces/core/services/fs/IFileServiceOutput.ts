@@ -1,11 +1,15 @@
-import { IFuncGetPath } from './IFuncGetPath';
-import { IFuncRead } from './IFuncRead';
-import { IFuncValidate } from './IFuncValidate';
-import { IFuncWrite } from './IFuncWrite';
+import {
+  IHelperGetPath,
+  IHelperRead,
+  IHelperValidate,
+  IHelperWrite,
+} from '@app/interfaces/core/services/fs/helpers';
+import { IFileServiceCreate } from './IFileServiceCreate';
 
 export interface IFileServiceOutput {
-  getPath: IFuncGetPath;
-  read: IFuncRead;
-  validate: IFuncValidate;
-  write: IFuncWrite;
+  create: IFileServiceCreate;
+  getPath: IHelperGetPath;
+  read: IHelperRead;
+  validate: IHelperValidate;
+  write: IHelperWrite;
 }

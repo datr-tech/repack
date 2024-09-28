@@ -1,5 +1,5 @@
 import { IDirService } from '@app/interfaces/core/services/fs';
-import { isDir } from './isDir';
+import { isDir } from '@app/core/services/fs/helpers';
 
 export const dirService: IDirService = ({ path }) => {
   const getPath = () => path;

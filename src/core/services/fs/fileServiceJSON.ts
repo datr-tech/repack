@@ -1,9 +1,14 @@
 import { IFileService } from '@app/interfaces/core/services/fs';
+import {
+  createFileJSON,
+  hasJSONExtension,
+} from '@app/core/services/fs/helpers';
 import { fileService } from './fileService';
-import { isJSON } from './isJSON';
 
 export const fileServiceJSON: IFileService = ({ path }) => {
   const fileServiceLocal = fileService({ path });
+
+  const create = () => createFileJSON({ path });
 
   const getPath = () => fileServiceLocal.getPath();
 
@@ -17,10 +22,10 @@ export const fileServiceJSON: IFileService = ({ path }) => {
     }
   };
 
-  const validate = () => fileServiceLocal.validate() && isJSON({ path });
+  const validate = () =>
+    fileServiceLocal.validate() && hasJSONExtension({ path });
 
-  const write = ({ contents }) =>
-    fileServiceLocal.write({ contents: JSON.stringify(contents) });
+  const write = ({ contents }) => fileServiceLocal.write({ contents });
 
-  return { getPath, read, validate, write };
+  return { create, getPath, read, validate, write };
 };

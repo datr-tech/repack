@@ -1,6 +1,8 @@
 import { IPathService } from '@app/interfaces/core/services/fs';
-import { getPathServiceByType } from './getPathServiceByType';
-import { getPathType } from './getPathType';
+import {
+  getPathServiceByType,
+  getPathType,
+} from '@app/core/services/fs/helpers';
 
 export const pathService: IPathService = ({ path }) => {
   return {

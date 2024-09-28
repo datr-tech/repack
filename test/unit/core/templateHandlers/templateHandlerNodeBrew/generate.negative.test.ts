@@ -1,11 +1,11 @@
-import { templateHandlerNodeBrew } from '@app/core/templateHandlers';
 import { packageJSONWrapper, sourceNode } from '@app/core/packages/source/node';
+import { templateHandlerNodeBrew } from '@app/core/templateHandlers';
 
 describe('core', () => {
   describe('templateHandlers', () => {
     describe('templateHandlerNodeBrew', () => {
       describe('generate', () => {
-        describe('positive: should return an empty string', () => {
+        describe('negative: should return an empty string', () => {
           test('when the template has not been loaded', () => {
             // Arrange
             const hasBeenCompiledExpected = false;

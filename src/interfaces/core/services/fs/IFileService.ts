@@ -1,6 +1,6 @@
-import { IFuncCommonInputPath } from './IFuncCommonInputPath';
+import { IHelperCommonInputPath } from '@app/interfaces/core/services/fs/helpers';
 import { IFileServiceOutput } from './IFileServiceOutput';
 
 export interface IFileService {
-  (args: IFuncCommonInputPath): IFileServiceOutput;
+  (args: IHelperCommonInputPath): IFileServiceOutput;
 }

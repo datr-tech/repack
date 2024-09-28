@@ -1,10 +1,12 @@
-import { IFuncGetPathServiceByTypeInputSingle } from './IFuncGetPathServiceByTypeInputSingle';
-import { IFuncGetPathServiceByTypeOutput } from './IFuncGetPathServiceByTypeOutput';
-import { IFuncGetPathTypeOutput } from './IFuncGetPathTypeOutput';
+import {
+  IHelperGetPathServiceByTypeInputSingle,
+  IHelperGetPathServiceByTypeOutput,
+  IHelperGetPathTypeOutput,
+} from '@app/interfaces/core/services/fs/helpers';
 
 export interface IPathServiceOutput {
   getPathServiceByType: (
-    args: IFuncGetPathServiceByTypeInputSingle,
-  ) => IFuncGetPathServiceByTypeOutput;
-  getPathType: () => IFuncGetPathTypeOutput;
+    args: IHelperGetPathServiceByTypeInputSingle,
+  ) => IHelperGetPathServiceByTypeOutput;
+  getPathType: () => IHelperGetPathTypeOutput;
 }

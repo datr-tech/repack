@@ -35,7 +35,7 @@ describe('cli', () => {
         test('when the input is a non-empty, invalid string', () => {
           // Arrange
           const dir = 'abc';
-          const expected = 'path is invalid';
+          const expected = 'path does not exist';
 
           // Act
           const handler = () => {

@@ -1,1 +1,20 @@
-{{name}}
+class {{name}} < Formula
+  desc "{{description}}"
+  homepage "https://example.com"
+  url "https://registry.npmjs.org/foo/-/foo-1.4.2.tgz"
+  sha256 "abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc1"
+
+  depends_on "node"
+  # uncomment if there is a native addon inside the dependency tree
+  # depends_on "python" => :build
+
+  def install
+    system "npm", "install", *std_npm_args
+    bin.install_symlink Dir["#{libexec}/bin/*"]
+  end
+
+  test do
+    # add a meaningful test here, version isn't usually meaningful
+    assert_match version.to_s, shell_output("#{dist}/{{name}} --version")
+  end
+end

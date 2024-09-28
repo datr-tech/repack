@@ -1,13 +1,17 @@
 import { readFileSync } from 'node:fs';
 import { IFileService } from '@app/interfaces/core/services/fs';
-import { isFile } from './isFile';
-import { writeContents } from './writeContents';
+import {
+  createFile,
+  isFile,
+  writeContents,
+} from '@app/core/services/fs/helpers';
 
 export const fileService: IFileService = ({ path }) => {
+  const create = () => createFile({ path });
   const getPath = () => path;
   const read = () => readFileSync(path, { encoding: 'utf8' });
   const validate = () => isFile({ path });
   const write = ({ contents }) => writeContents({ contents, path });
 
-  return { getPath, read, validate, write };
+  return { create, getPath, read, validate, write };
 };

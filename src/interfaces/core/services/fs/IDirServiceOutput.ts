@@ -1,7 +1,9 @@
-import { IFuncGetPath } from './IFuncGetPath';
-import { IFuncValidate } from './IFuncValidate';
+import {
+  IHelperGetPath,
+  IHelperValidate,
+} from '@app/interfaces/core/services/fs/helpers';
 
 export interface IDirServiceOutput {
-  getPath: IFuncGetPath;
-  validate: IFuncValidate;
+  getPath: IHelperGetPath;
+  validate: IHelperValidate;
 }

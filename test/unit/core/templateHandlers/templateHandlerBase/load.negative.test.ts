@@ -1,6 +1,6 @@
 import { DestinationPackageTypeEnum } from '@app/config/enums';
-import { templateHandlerBase } from '@app/core/templateHandlers';
 import { packageJSONWrapper, sourceNode } from '@app/core/packages/source/node';
+import { templateHandlerBase } from '@app/core/templateHandlers';
 
 describe('core', () => {
   describe('templateHandlers', () => {
@@ -34,7 +34,7 @@ describe('core', () => {
           test("when 'templatePath' did not represent a valid file object", () => {
             // Arrange
             const destinationType = DestinationPackageTypeEnum.BREW;
-            const errorExpected = 'path is invalid';
+            const errorExpected = 'path does not exist';
             const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
             const templatePath = 'abc';
             const packageJSONWrapperObj = packageJSONWrapper({

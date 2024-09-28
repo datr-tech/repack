@@ -1,4 +1,7 @@
 import path from 'path';
-import { jestAppMocksPackageJsonInvalidDir } from "./jestAppMocksPackageJsonInvalidDir";
+import { jestAppMocksPackageJsonInvalidDir } from './jestAppMocksPackageJsonInvalidDir';
 
-export const jestAppMocksPackageJsonInvalidPath = path.resolve(jestAppMocksPackageJsonInvalidDir, 'package.json');
+export const jestAppMocksPackageJsonInvalidPath = path.resolve(
+  jestAppMocksPackageJsonInvalidDir,
+  'package.json',
+);

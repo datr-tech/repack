@@ -1,6 +1,6 @@
-import { IFuncCommonInputPath } from './IFuncCommonInputPath';
+import { IHelperCommonInputPath } from '@app/interfaces/core/services/fs/helpers';
 import { IDirServiceOutput } from './IDirServiceOutput';
 
 export interface IDirService {
-  (args: IFuncCommonInputPath): IDirServiceOutput;
+  (args: IHelperCommonInputPath): IDirServiceOutput;
 }

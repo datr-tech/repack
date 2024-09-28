@@ -1,5 +1,5 @@
-import { templateHandlerNodeBrew } from '@app/core/templateHandlers';
 import { packageJSONWrapper, sourceNode } from '@app/core/packages/source/node';
+import { templateHandlerNodeBrew } from '@app/core/templateHandlers';
 
 describe('core', () => {
   describe('templateHandlers', () => {

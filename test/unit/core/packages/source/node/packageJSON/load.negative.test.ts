@@ -18,7 +18,7 @@ describe('core', () => {
 
                 expect(hasLoaded).toEqual(expected);
               });
-              test("when 'packageDirPath' is a one char empty string", () => {
+              test("when 'packageDirPath' is a one char string", () => {
                 // Arrange
                 const packageDirPath = ' ';
                 const expected = false;

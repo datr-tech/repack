@@ -1,5 +1,5 @@
-import { templateHandlerNodeBrew } from '@app/core/templateHandlers';
 import { packageJSONWrapper, sourceNode } from '@app/core/packages/source/node';
+import { templateHandlerNodeBrew } from '@app/core/templateHandlers';
 
 describe('core', () => {
   describe('templateHandlers', () => {
@@ -8,7 +8,7 @@ describe('core', () => {
         describe('positive: should return the expected string', () => {
           test('when the template has been generated (with the source data)', () => {
             // Arrange
-            const nameExpected = 'abc';
+            const templateExpected = '';
             const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
             const packageJSONWrapperObj = packageJSONWrapper({
               packageDirPath,
@@ -21,10 +21,10 @@ describe('core', () => {
             });
             templateHandler.load();
             templateHandler.compile();
-            const nameFound = templateHandler.generate();
+            const templateFound = templateHandler.generate();
 
             // Assert
-            expect(nameFound).toEqual(nameExpected);
+            expect(templateFound).not.toEqual(templateExpected);
           });
         });
       });

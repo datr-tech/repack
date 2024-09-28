@@ -1,4 +1,4 @@
-import { isDir } from '@app/core/services/fs';
+import { isDir } from '@app/core/services/fs/helpers';
 import { InvalidArgumentError } from 'commander';
 
 export const dirValidator = (dir: string) => {
