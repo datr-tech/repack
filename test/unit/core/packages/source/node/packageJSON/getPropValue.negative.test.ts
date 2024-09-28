@@ -1,4 +1,4 @@
-import { CONSTS_PROP_VALUE_NOT_FOUND } from '@app/config/consts';
+import { CONSTS_UTILS_PROP_VALUE_NOT_FOUND } from '@app/config/consts';
 import { packageJSON } from '@app/core/packages/source/node';
 
 describe('core', () => {
@@ -38,7 +38,7 @@ describe('core', () => {
 
                 const hasLoadedExpected = true;
                 const propName = 'description-unknown';
-                const propValueExpected = CONSTS_PROP_VALUE_NOT_FOUND;
+                const propValueExpected = CONSTS_UTILS_PROP_VALUE_NOT_FOUND;
 
                 // Act
                 const packageJSONObj = packageJSON({ packageDirPath });

@@ -1,4 +1,4 @@
-import { CONSTS_PROP_VALUE_NOT_FOUND } from '@app/config/consts';
+import { CONSTS_UTILS_PROP_VALUE_NOT_FOUND } from '@app/config/consts';
 import { packageJSONWrapper } from '@app/core/packages/source/node';
 
 describe('core', () => {
@@ -12,7 +12,7 @@ describe('core', () => {
                 // Arrange
                 const packageDirPath =
                   global.JEST_APP_MOCKS_PACKAGE_JSON_INVALID_DIR;
-                const versionExpected = CONSTS_PROP_VALUE_NOT_FOUND;
+                const versionExpected = CONSTS_UTILS_PROP_VALUE_NOT_FOUND;
                 const hasLoadedExpected = true;
 
                 // Act

@@ -1,4 +1,4 @@
-import { CONSTS_FILE_EXTENSION_JSON } from '@app/config/consts';
+import { CONSTS_UTILS_FILE_EXTENSION_JSON } from '@app/config/consts';
 import { IHelperHasJSONExtension } from '@app/interfaces/core/services/fs/helpers';
 import { getExtension } from './getExtension';
 import { isPathTruthy } from './isPathTruthy';
@@ -11,7 +11,7 @@ export const hasJSONExtension: IHelperHasJSONExtension = ({ path }) => {
   }
 
   const extension = getExtension({ pathStr: path });
-  isValid = extension === CONSTS_FILE_EXTENSION_JSON;
+  isValid = extension === CONSTS_UTILS_FILE_EXTENSION_JSON;
 
   return isValid;
 };
