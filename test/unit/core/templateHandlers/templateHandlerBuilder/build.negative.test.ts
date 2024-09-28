@@ -11,8 +11,7 @@ describe('core', () => {
             // Arrange
             const destinationType = DestinationPackageTypeEnum.UNK;
             const errorExpected = 'invalid templateHandlers';
-            const testDir = process.env.REPACK_TEST_DIR as string;
-            const packageDirPath = `${testDir}/mocks/files/valid`;
+            const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
             const packageJSONWrapperObj = packageJSONWrapper({
               packageDirPath,
             });

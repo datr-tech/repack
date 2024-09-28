@@ -10,8 +10,7 @@ describe('core', () => {
           describe("positive: should build the 'source' obj", () => {
             test('when a package.json has been loaded', () => {
               // Arrange
-              const testDir = process.env.REPACK_TEST_DIR as string;
-              const path = `${testDir}/mocks/files/valid`;
+              const path = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
               const nameExpected = 'abc';
               const sourceTypeExpected = SourcePackageTypeEnum.NODE;
 

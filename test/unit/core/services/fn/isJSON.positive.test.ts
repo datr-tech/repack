@@ -8,8 +8,7 @@ describe('core', () => {
           test("when 'path' represents a valid file", () => {
             // Arrange
             const expected = true;
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/package.json`;
+            const path = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_PATH;
 
             // Act
             const found = isJSON({ path });

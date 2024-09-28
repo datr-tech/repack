@@ -10,8 +10,7 @@ describe('core', () => {
             // Arrange
             const hasBeenCompiledExpected = false;
             const nameExpected = '';
-            const testDir = process.env.REPACK_TEST_DIR as string;
-            const packageDirPath = `${testDir}/mocks/files/valid`;
+            const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
             const packageJSONWrapperObj = packageJSONWrapper({
               packageDirPath,
             });
@@ -31,8 +30,7 @@ describe('core', () => {
           test('when the template has not been compiled', () => {
             // Arrange
             const nameExpected = '';
-            const testDir = process.env.REPACK_TEST_DIR as string;
-            const packageDirPath = `${testDir}/mocks/files/valid`;
+            const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
             const packageJSONWrapperObj = packageJSONWrapper({
               packageDirPath,
             });

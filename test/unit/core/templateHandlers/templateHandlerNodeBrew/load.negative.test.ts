@@ -10,8 +10,7 @@ describe('core', () => {
           test('when templatePath does not represent a valid file object', () => {
             // Arrange
             const errorExpected = 'path is invalid';
-            const testDir = process.env.REPACK_TEST_DIR as string;
-            const packageDirPath = `${testDir}/mocks/files/valid`;
+            const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
             const templatePath = '/invalid_path';
             const packageJSONWrapperObj = packageJSONWrapper({
               packageDirPath,
@@ -35,8 +34,7 @@ describe('core', () => {
           test('when templatePath represents a dir', () => {
             // Arrange
             const hasLoadedExpected = false;
-            const testDir = process.env.REPACK_TEST_DIR as string;
-            const packageDirPath = `${testDir}/mocks/files/valid`;
+            const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
             const templatePath = CONSTS_PATH_APP_ROOT;
             const packageJSONWrapperObj = packageJSONWrapper({
               packageDirPath,

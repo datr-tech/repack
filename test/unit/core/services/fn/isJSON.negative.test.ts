@@ -8,8 +8,7 @@ describe('core', () => {
           test("when 'path' represents a valid .md file", () => {
             // Arrange
             const expected = false;
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/README.md`;
+            const path = global.JEST_APP_MOCKS_MARKDOWN_VALID_PATH;
 
             // Act
             const found = isJSON({ path });
@@ -20,8 +19,7 @@ describe('core', () => {
           test("when 'path' represents a valid .mjs file", () => {
             // Arrange
             const expected = false;
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/eslint.config.mjs`;
+            const path = global.JEST_APP_MOCKS_MJS_VALID_PATH;
 
             // Act
             const found = isJSON({ path });
@@ -32,8 +30,7 @@ describe('core', () => {
           test("when 'path' represents a valid .ts file", () => {
             // Arrange
             const expected = false;
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/jest.config.ts`;
+            const path = global.JEST_APP_MOCKS_TS_VALID_PATH;
 
             // Act
             const found = isJSON({ path });

@@ -9,8 +9,7 @@ describe('core', () => {
           test("when 'path' represents a non-JSON file", () => {
             // Arrange
             const expectedError = 'parse error';
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/README.md`;
+            const path = global.JEST_APP_MOCKS_MARKDOWN_VALID_PATH;
 
             // Act
             const foundService = fileServiceJSON({

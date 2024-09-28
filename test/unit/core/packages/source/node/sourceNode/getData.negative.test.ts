@@ -9,8 +9,8 @@ describe('core', () => {
             describe('negative: should return the expected object with default values', () => {
               test('when an empty package.json file has been loaded', () => {
                 // Arrange
-                const testDir = process.env.REPACK_TEST_DIR as string;
-                const packageDirPath = `${testDir}/mocks/files/invalid`;
+                const packageDirPath =
+                  global.JEST_APP_MOCKS_PACKAGE_JSON_INVALID_DIR;
                 const packageJSONWrapperObj = packageJSONWrapper({
                   packageDirPath,
                 });

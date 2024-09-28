@@ -53,8 +53,7 @@ describe('core', () => {
               });
               test("when 'packageDirPath' represents a non-JSON file", () => {
                 // Arrange
-                const rootDir = process.env.REPACK_ROOT_DIR as string;
-                const packageDirPath = `${rootDir}/jest.config.ts`;
+                const packageDirPath = global.JEST_APP_MOCKS_TS_VALID_PATH;
                 const expected = false;
 
                 // Act

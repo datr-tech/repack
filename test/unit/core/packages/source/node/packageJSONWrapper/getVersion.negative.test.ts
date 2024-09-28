@@ -10,8 +10,8 @@ describe('core', () => {
             describe('negative: should return the default value', () => {
               test("when 'version' does not represent a known property", () => {
                 // Arrange
-                const testDir = process.env.REPACK_TEST_DIR as string;
-                const packageDirPath = `${testDir}/mocks/files/invalid`;
+                const packageDirPath =
+                  global.JEST_APP_MOCKS_PACKAGE_JSON_INVALID_DIR;
                 const versionExpected = CONSTS_PROP_VALUE_NOT_FOUND;
                 const hasLoadedExpected = true;
 
@@ -27,8 +27,7 @@ describe('core', () => {
             describe('negative: throw an error', () => {
               test('when the package.json file has not been loaded', () => {
                 // Arrange
-                const testDir = process.env.REPACK_TEST_DIR as string;
-                const packageDirPath = `${testDir}/mocks/files/invalid`;
+                const packageDirPath = global.JEST_APP_MOCKS_DIR;
                 const errorExpected = 'json not loaded';
 
                 // Act

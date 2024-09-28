@@ -9,8 +9,8 @@ describe('core', () => {
             describe('positive: should return the expected value', () => {
               test("when 'description' represents a known property", () => {
                 // Arrange
-                const testDir = process.env.REPACK_TEST_DIR as string;
-                const packageDirPath = `${testDir}/mocks/files/valid`;
+                const packageDirPath =
+                  global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
                 const entryPointExpected = '/path/to/entry/point';
                 const hasLoadedExpected = true;
 

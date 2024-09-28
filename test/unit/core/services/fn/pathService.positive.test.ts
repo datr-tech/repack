@@ -13,7 +13,7 @@ describe('core', () => {
         describe('positive: should return the expected functions', () => {
           test("when 'path' represents a valid dir", () => {
             // Arrange
-            const path = process.env.REPACK_ROOT_DIR as string;
+            const path = global.JEST_APP_MOCKS_DIR;
             const expectedPathType = PathTypeEnum.DIR;
             const expectedIsValid = true;
 
@@ -31,8 +31,7 @@ describe('core', () => {
           });
           test("when 'path' represents a valid file", () => {
             // Arrange
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/README.md`;
+            const path = global.JEST_APP_MOCKS_MARKDOWN_VALID_PATH;
             const expectedPathType = PathTypeEnum.FILE;
             const expectedIsValid = true;
 
@@ -50,8 +49,7 @@ describe('core', () => {
           });
           test("when 'path' represents a valid JSON file", () => {
             // Arrange
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/package.json`;
+            const path = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_PATH;
             const expectedPathType = PathTypeEnum.JSON;
             const expectedIsValid = true;
             const expectedContents = JSON.parse(

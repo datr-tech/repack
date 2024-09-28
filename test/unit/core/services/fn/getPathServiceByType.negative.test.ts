@@ -9,7 +9,7 @@ describe('core', () => {
           test("when 'pathType' is 'PathTypeEnum.NF'", () => {
             // Arrange
             const expected = 'unknown pathType';
-            const path = process.env.REPACK_ROOT_DIR as string;
+            const path = global.JEST_APP_MOCKS_DIR;
             const pathType = PathTypeEnum.NF;
 
             // Act
@@ -23,7 +23,7 @@ describe('core', () => {
           test("when 'pathType' is 'PathTypeEnum.UNK'", () => {
             // Arrange
             const expected = 'unknown pathType';
-            const path = process.env.REPACK_ROOT_DIR as string;
+            const path = global.JEST_APP_MOCKS_DIR;
             const pathType = PathTypeEnum.UNK;
 
             // Act

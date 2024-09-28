@@ -9,7 +9,8 @@ describe('core', () => {
             describe('positive: should return true', () => {
               test("when 'packageDirPath' represents a valid JSON file", () => {
                 // Arrange
-                const packageDirPath = process.env.REPACK_ROOT_DIR as string;
+                const packageDirPath =
+                  global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
                 const expected = true;
 
                 // Act

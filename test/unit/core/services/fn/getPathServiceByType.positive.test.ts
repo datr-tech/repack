@@ -13,8 +13,7 @@ describe('core', () => {
         describe('positive: should return the expected pathService', () => {
           test("when 'path' represents a valid file", () => {
             // Arrange
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/README.md`;
+            const path = global.JEST_APP_MOCKS_MARKDOWN_VALID_PATH;
             const pathType = PathTypeEnum.FILE;
             const fileServiceContentsExpected = readFileSync(path, {
               encoding: 'utf8',
@@ -38,8 +37,7 @@ describe('core', () => {
           });
           test("when 'path' represents a valid JSON file", () => {
             // Arrange
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/package.json`;
+            const path = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_PATH;
             const pathType = PathTypeEnum.JSON;
             const fileServiceContentsExpected = JSON.parse(
               readFileSync(path, { encoding: 'utf8' }),
@@ -63,7 +61,7 @@ describe('core', () => {
           });
           test("when 'path' represents a valid dir", () => {
             // Arrange
-            const path = process.env.REPACK_ROOT_DIR as string;
+            const path = global.JEST_APP_MOCKS_DIR;
             const pathType = PathTypeEnum.DIR;
 
             // Act

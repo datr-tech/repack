@@ -6,7 +6,7 @@ describe('cli', () => {
       describe('positive: should return the input', () => {
         test('when the input is a valid dir', () => {
           // Arrange
-          const dirPath = process.env.REPACK_ROOT_DIR as string;
+          const dirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
 
           // Act
           const found = dirValidator(dirPath);

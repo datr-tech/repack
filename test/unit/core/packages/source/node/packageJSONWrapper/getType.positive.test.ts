@@ -10,8 +10,8 @@ describe('core', () => {
             describe('positive: should return the expected enum', () => {
               test('when a package.json (with a type property) is loaded', () => {
                 // Arrange
-                const testDir = process.env.REPACK_TEST_DIR as string;
-                const packageDirPath = `${testDir}/mocks/files/valid`;
+                const packageDirPath =
+                  global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
                 const typeExpected = SourcePackageTypeEnum.NODE;
                 const hasLoadedExpected = true;
 
@@ -25,8 +25,8 @@ describe('core', () => {
               });
               test('when a package.json (without a type property) is loaded', () => {
                 // Arrange
-                const testDir = process.env.REPACK_TEST_DIR as string;
-                const packageDirPath = `${testDir}/mocks/files/invalid`;
+                const packageDirPath =
+                  global.JEST_APP_MOCKS_PACKAGE_JSON_INVALID_DIR;
                 const typeExpected = SourcePackageTypeEnum.NODE;
                 const hasLoadedExpected = true;
 

@@ -1,4 +1,3 @@
-import { readFileSync } from 'node:fs';
 import { fileService } from '@app/core/services/fs';
 import { IFileServiceOutput } from '@app/interfaces/core/services/fs';
 
@@ -9,11 +8,8 @@ describe('core', () => {
         describe('positive: should return the expected object', () => {
           test("when 'path' represents a valid .md file", () => {
             // Arrange
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/README.md`;
-            const contentsExpected = readFileSync(path, {
-              encoding: 'utf8',
-            });
+            const path = global.JEST_APP_MOCKS_MARKDOWN_VALID_PATH;
+            const contentsExpected = global.jestReadFileSync(path);
 
             // Act
             const foundService = fileService({ path }) as IFileServiceOutput;
@@ -28,11 +24,8 @@ describe('core', () => {
           });
           test("when 'path' represents a valid .mjs file", () => {
             // Arrange
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/eslint.config.mjs`;
-            const contentsExpected = readFileSync(path, {
-              encoding: 'utf8',
-            });
+            const path = global.JEST_APP_MOCKS_MJS_VALID_PATH;
+            const contentsExpected = global.jestReadFileSync(path);
 
             // Act
             const foundService = fileService({ path }) as IFileServiceOutput;
@@ -47,11 +40,8 @@ describe('core', () => {
           });
           test("when 'path' represents a valid .ts file", () => {
             // Arrange
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/jest.config.ts`;
-            const contentsExpected = readFileSync(path, {
-              encoding: 'utf8',
-            });
+            const path = global.JEST_APP_MOCKS_TS_VALID_PATH;
+            const contentsExpected = global.jestReadFileSync(path);
 
             // Act
             const foundService = fileService({ path }) as IFileServiceOutput;

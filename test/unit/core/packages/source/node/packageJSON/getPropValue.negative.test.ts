@@ -10,8 +10,8 @@ describe('core', () => {
             describe('negative: should return the supplied default value', () => {
               test("when 'name' does not represent a known property", () => {
                 // Arrange
-                const testDir = process.env.REPACK_TEST_DIR as string;
-                const packageDirPath = `${testDir}/mocks/files/valid`;
+                const packageDirPath =
+                  global.JEST_APP_MOCKS_PACKAGE_JSON_INVALID_DIR;
 
                 const defaultValue = 'DEFAULT';
                 const hasLoadedExpected = true;
@@ -33,8 +33,8 @@ describe('core', () => {
             describe('negative: should return the default value', () => {
               test("when 'name' does not represent a known property", () => {
                 // Arrange
-                const testDir = process.env.REPACK_TEST_DIR as string;
-                const packageDirPath = `${testDir}/mocks/files/valid`;
+                const packageDirPath =
+                  global.JEST_APP_MOCKS_PACKAGE_JSON_INVALID_DIR;
 
                 const hasLoadedExpected = true;
                 const propName = 'description-unknown';
@@ -54,8 +54,7 @@ describe('core', () => {
             describe('negative: should throw an error', () => {
               test('when the package.json file had not been loaded', () => {
                 // Arrange
-                const testDir = process.env.REPACK_TEST_DIR as string;
-                const packageDirPath = `${testDir}/mocks/files/valid`;
+                const packageDirPath = global.JEST_APP_MOCKS_DIR;
                 const propName = 'description';
                 const errorExpected = 'json not loaded';
 

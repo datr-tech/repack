@@ -49,8 +49,7 @@ describe('core', () => {
           test("when 'path' represents a file", () => {
             // Arrange
             const expected = false;
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/package.json`;
+            const path = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_PATH;
 
             // Act
             const found = isDir({ path });

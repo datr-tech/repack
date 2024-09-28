@@ -49,7 +49,7 @@ describe('core', () => {
           test("when 'path' represents a dir", () => {
             // Arrange
             const expected = false;
-            const path = process.env.REPACK_ROOT_DIR as string;
+            const path = global.JEST_APP_MOCKS_DIR;
 
             // Act
             const found = isFile({ path });

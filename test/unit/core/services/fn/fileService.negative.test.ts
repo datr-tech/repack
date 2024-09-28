@@ -8,7 +8,7 @@ describe('core', () => {
         describe("negative: validate() should be 'false'", () => {
           test("when 'path' represents a valid dir", () => {
             // Arrange
-            const path = process.env.REPACK_ROOT_DIR as string;
+            const path = global.JEST_APP_MOCKS_DIR;
 
             // Act
             const foundService = fileService({ path }) as IFileServiceOutput;

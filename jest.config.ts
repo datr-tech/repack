@@ -1,9 +1,4 @@
 export default {
-  testEnvironment: 'node',
-  transform: {
-    '^.+.tsx?$': ['ts-jest', {}],
-  },
-  testPathIgnorePatterns: ['/node_modules/'],
   coverageReporters: ['clover', 'text'],
   coverageThreshold: {
     global: {
@@ -13,8 +8,16 @@ export default {
       statements: 30,
     },
   },
-  setupFiles: ['<rootDir>/.jest/setEnvVars.js'],
   moduleNameMapper: {
     '@app/(.*)': '<rootDir>/src/$1',
   },
+  setupFilesAfterEnv: [
+    '<rootDir>/.jest/setupPaths.ts',
+    '<rootDir>/.jest/setupFunctions.ts',
+  ],
+  testEnvironment: 'node',
+  testPathIgnorePatterns: ['/node_modules/'],
+  transform: {
+    '^.+.tsx?$': ['ts-jest', {}],
+  }
 };

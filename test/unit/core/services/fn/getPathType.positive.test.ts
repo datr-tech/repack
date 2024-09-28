@@ -9,7 +9,7 @@ describe('core', () => {
           test("when 'path' represents a valid dir", () => {
             // Arrange
             const expected = PathTypeEnum.DIR;
-            const path = process.env.REPACK_ROOT_DIR as string;
+            const path = global.JEST_APP_MOCKS_DIR;
 
             // Act
             const found = getPathType({ path });
@@ -22,8 +22,7 @@ describe('core', () => {
           test("when 'path' represents a valid, non-JSON, .md file", () => {
             // Arrange
             const expected = PathTypeEnum.FILE;
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/README.md`;
+            const path = global.JEST_APP_MOCKS_MARKDOWN_VALID_PATH;
 
             // Act
             const found = getPathType({ path });
@@ -34,8 +33,7 @@ describe('core', () => {
           test("when 'path' represents a valid, non-JSON, .mjs file", () => {
             // Arrange
             const expected = PathTypeEnum.FILE;
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/eslint.config.mjs`;
+            const path = global.JEST_APP_MOCKS_MJS_VALID_PATH;
 
             // Act
             const found = getPathType({ path });
@@ -46,8 +44,7 @@ describe('core', () => {
           test("when 'path' represents a valid, non-JSON, .ts file", () => {
             // Arrange
             const expected = PathTypeEnum.FILE;
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/jest.config.ts`;
+            const path = global.JEST_APP_MOCKS_TS_VALID_PATH;
 
             // Act
             const found = getPathType({ path });
@@ -60,8 +57,7 @@ describe('core', () => {
           test("when 'path' represents a valid JSON file", () => {
             // Arrange
             const expected = PathTypeEnum.JSON;
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/package.json`;
+            const path = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_PATH;
 
             // Act
             const found = getPathType({ path });

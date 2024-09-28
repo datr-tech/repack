@@ -11,9 +11,8 @@ describe('core', () => {
             // Arrange
             const destinationType = DestinationPackageTypeEnum.BREW;
             const hasLoadedExpected = false;
-            const testDir = process.env.REPACK_TEST_DIR as string;
-            const packageDirPath = `${testDir}/mocks/files/valid`;
-            const templatePath = `${testDir}/mocks/`;
+            const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
+            const templatePath = global.JEST_APP_MOCKS_DIR;
             const packageJSONWrapperObj = packageJSONWrapper({
               packageDirPath,
             });
@@ -36,8 +35,7 @@ describe('core', () => {
             // Arrange
             const destinationType = DestinationPackageTypeEnum.BREW;
             const errorExpected = 'path is invalid';
-            const testDir = process.env.REPACK_TEST_DIR as string;
-            const packageDirPath = `${testDir}/mocks/files/valid`;
+            const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
             const templatePath = 'abc';
             const packageJSONWrapperObj = packageJSONWrapper({
               packageDirPath,

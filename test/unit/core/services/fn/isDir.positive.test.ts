@@ -8,7 +8,7 @@ describe('core', () => {
           test("when 'path' represents a valid dir", () => {
             // Arrange
             const expected = true;
-            const path = process.env.REPACK_ROOT_DIR as string;
+            const path = global.JEST_APP_MOCKS_DIR;
 
             // Act
             const found = isDir({ path });

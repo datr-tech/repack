@@ -9,9 +9,8 @@ describe('core', () => {
         test('should return the expected destination and source types', () => {
           // Arrange
           const destinationTypeExpected = DestinationPackageTypeEnum.BREW;
-          const testDir = process.env.REPACK_TEST_DIR as string;
-          const packageDirPath = `${testDir}/mocks/files/valid`;
-          const templatePath = `${testDir}/mocks/templates/node.brew.handlebars`;
+          const packageDirPath = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
+          const templatePath = `${global.JEST_APP_MOCKS_TEMPLATES_DIR}/node.brew.handlebars`;
           const packageJSONWrapperObj = packageJSONWrapper({
             packageDirPath,
           });

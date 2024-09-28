@@ -14,7 +14,7 @@ describe('core', () => {
           test("when 'path' is neither a file, a JSON file, nor a dir", () => {
             // Arrange
             const expected = PathTypeEnum.UNK;
-            const path = process.env.REPACK_ROOT_DIR as string;
+            const path = global.JEST_APP_MOCKS_DIR;
 
             // Act
             const found = getPathType({ path });

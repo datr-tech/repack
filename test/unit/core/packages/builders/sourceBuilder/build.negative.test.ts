@@ -10,8 +10,7 @@ describe('core', () => {
           describe('negative: should throw an error', () => {
             test("when 'sourceType' did not match with a known source", () => {
               // Arrange
-              const testDir = process.env.REPACK_TEST_DIR as string;
-              const path = `${testDir}/mocks/files/valid`;
+              const path = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_DIR;
               const errorExpected = 'invalid sources';
               const sourceType = SourcePackageTypeEnum.UNK;
 

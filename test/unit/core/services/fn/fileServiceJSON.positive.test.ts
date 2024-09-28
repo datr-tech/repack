@@ -9,8 +9,7 @@ describe('core', () => {
         describe('positive: should return the expected object', () => {
           test("when 'path' represents a valid .json file", () => {
             // Arrange
-            const rootDir = process.env.REPACK_ROOT_DIR as string;
-            const path = `${rootDir}/package.json`;
+            const path = global.JEST_APP_MOCKS_PACKAGE_JSON_VALID_PATH;
             const contentsExpected = JSON.parse(
               readFileSync(path, {
                 encoding: 'utf8',
