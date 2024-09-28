@@ -1,4 +1,4 @@
-import { FromPackageTypeEnum } from '@app/config/enums';
+import { SourcePackageTypeEnum } from '@app/config/enums';
 import {
   IFuncGetPropValueInputPropName,
   IPackageJSONOutput,
@@ -11,12 +11,11 @@ export const packageJSONWrapper: IPackageJSONWrapper = ({ packageDirPath }) => {
   const getEntryPoint = () => getPropValue('main');
   const getMan = () => getPropValue('man');
   const getName = () => getPropValue('name');
-  const getType = () => FromPackageTypeEnum.NPM;
+  const getType = () => SourcePackageTypeEnum.NODE;
   const getVersion = () => getPropValue('version');
 
   const getPropValue = (propName: IFuncGetPropValueInputPropName) =>
     packageJSONObj.getPropValue({ propName });
-
   const load = () => packageJSONObj.load();
 
   const packageJSONObj: IPackageJSONOutput = packageJSON({ packageDirPath });

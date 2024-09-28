@@ -13,5 +13,7 @@ export { IFuncIsPath } from './IFuncIsPath';
 export { IFuncIsJSON } from './IFuncIsJSON';
 export { IFuncRead } from './IFuncRead';
 export { IFuncValidate } from './IFuncValidate';
+export { IFuncWrite } from './IFuncWrite';
+export { IFuncWriteContents } from './IFuncWriteContents';
 export { IPathService } from './IPathService';
 export { IPathServiceOutput } from './IPathServiceOutput';

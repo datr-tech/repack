@@ -6,18 +6,21 @@ export const fileServiceJSON: IFileService = ({ path }) => {
   const fileServiceLocal = fileService({ path });
 
   const getPath = () => fileServiceLocal.getPath();
+
   const read = () => {
     try {
       const fileContents: string = fileServiceLocal.read() as string;
-      const fileContentsJSON = JSON.parse(fileContents);
-
-      return fileContentsJSON;
+      return JSON.parse(fileContents);
     } catch (error) {
       const { message } = error;
       throw new Error(`parse error: ${message}`);
     }
   };
+
   const validate = () => fileServiceLocal.validate() && isJSON({ path });
 
-  return { getPath, read, validate };
+  const write = ({ contents }) =>
+    fileServiceLocal.write({ contents: JSON.stringify(contents) });
+
+  return { getPath, read, validate, write };
 };

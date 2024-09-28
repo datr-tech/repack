@@ -1,3 +1,3 @@
-export { FromPackageTypeEnum } from './FromPackageTypeEnum';
+export { SourcePackageTypeEnum } from './SourcePackageTypeEnum';
 export { PathTypeEnum } from './PathTypeEnum';
-export { ToPackageTypeEnum } from './ToPackageTypeEnum';
+export { DestinationPackageTypeEnum } from './DestinationPackageTypeEnum';

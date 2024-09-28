@@ -3,3 +3,4 @@ export { IFuncGetPropValueInputPropName } from './IFuncGetPropValueInputPropName
 export { IPackageJSON } from './IPackageJSON';
 export { IPackageJSONOutput } from './IPackageJSONOutput';
 export { IPackageJSONWrapper } from './IPackageJSONWrapper';
+export { IPackageJSONWrapperOutput } from './IPackageJSONWrapperOutput';

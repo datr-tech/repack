@@ -1,13 +1,13 @@
 import {
-  FromPackageTypeEnum,
+  SourcePackageTypeEnum,
   PathTypeEnum,
-  ToPackageTypeEnum,
+  DestinationPackageTypeEnum,
 } from '@app/config/enums';
 
 describe('config', () => {
   describe('enums', () => {
-    test('FromPackageTypeEnum', () => {
-      expect(FromPackageTypeEnum.NPM).toBe('NPM');
+    test('SourcePackageTypeEnum', () => {
+      expect(SourcePackageTypeEnum.NODE).toBe('NODE');
     });
     test('PathTypeEnum', () => {
       expect(PathTypeEnum.FILE).toBe(1);
@@ -16,8 +16,8 @@ describe('config', () => {
       expect(PathTypeEnum.UNK).toBe(4);
       expect(PathTypeEnum.NF).toBe(5);
     });
-    test('ToPackageTypeEnum', () => {
-      expect(ToPackageTypeEnum.BREW).toBe('BREW');
+    test('DestinationPackageTypeEnum', () => {
+      expect(DestinationPackageTypeEnum.BREW).toBe('BREW');
     });
   });
 });

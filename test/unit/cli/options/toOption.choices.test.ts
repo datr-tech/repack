@@ -6,7 +6,7 @@ describe('cli', () => {
       describe('choices', () => {
         test('should be valid', () => {
           // Arrange
-          const expected = 'brew';
+          const expected = 'BREW';
 
           // Act
           const { argChoices } = toOption;
