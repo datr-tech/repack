@@ -14,7 +14,7 @@ export const destinationBuilder: IDestinationBuilder = ({
     );
 
     if (destinationsFiltered.length !== 1) {
-      throw new Error('invalid sources');
+      throw new Error('invalid destinations');
     }
 
     return destinationsFiltered[0] as IDestinationOutput;
