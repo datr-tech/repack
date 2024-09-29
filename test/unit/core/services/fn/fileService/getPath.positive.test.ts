@@ -1,7 +1,7 @@
 import { fileService } from '@app/core/services/fs';
 import { IFileServiceOutput } from '@app/interfaces/core/services/fs';
 
-let pathToBeCreated: string;
+const pathToBeCreated = `${global.JEST_APP_MOCKS_DIR}/temp.${Date.now()}txt`;
 
 describe('core', () => {
   describe('services', () => {
@@ -9,7 +9,6 @@ describe('core', () => {
       describe('fileService', () => {
         describe('getPath', () => {
           beforeAll(() => {
-            pathToBeCreated = `${global.JEST_APP_MOCKS_DIR}/temp.txt`;
             global.jestTouchFileSync(pathToBeCreated);
           });
           afterAll(() => {

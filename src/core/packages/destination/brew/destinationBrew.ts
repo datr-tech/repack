@@ -1,19 +1,35 @@
 import { DestinationPackageTypeEnum } from '@app/config/enums';
+import { fileService } from '@app/core/services/fs';
 import { templateHandlerBuilder } from '@app/core/templateHandlers';
 import { IDestination } from '@app/interfaces/core/packages/destination';
+import { CONSTS_PATH_OUT_PATH_TEMP } from '@app/config/consts';
 
 export const destinationBrew: IDestination = ({ source }) => {
   const generate = () => {
-    const template = templateHandlerBuilder({
-      destinationType: getType(),
-      source,
-    }).build();
+    let hasBeenGenerated = false;
 
-    template.load();
-    template.compile();
-    template.generate();
+    try {
+      // Compile and populate the template
+      const template = templateHandlerBuilder({
+        destinationType: getType(),
+        source,
+      }).build();
 
-    return true;
+      template.load();
+      template.compile();
+      const contents = template.generate();
+
+      // Write the contents to the temp out path
+      const path = CONSTS_PATH_OUT_PATH_TEMP;
+      const file = fileService({ path });
+      file.create();
+      hasBeenGenerated = file.write({ contents });
+    } catch (error) {
+      const { message } = error;
+      throw new Error(message);
+    }
+
+    return hasBeenGenerated;
   };
 
   const getType = () => DestinationPackageTypeEnum.BREW;
