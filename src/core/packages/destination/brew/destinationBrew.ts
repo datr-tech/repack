@@ -5,7 +5,7 @@ import { IDestination } from '@app/interfaces/core/packages/destination';
 import { CONSTS_PATH_OUT_PATH_TEMP } from '@app/config/consts';
 
 export const destinationBrew: IDestination = ({ source }) => {
-  const generate = () => {
+  const generate = ({ outPath = CONSTS_PATH_OUT_PATH_TEMP }) => {
     let hasBeenGenerated = false;
 
     try {
@@ -20,10 +20,11 @@ export const destinationBrew: IDestination = ({ source }) => {
       const contents = template.generate();
 
       // Write the contents to the temp out path
-      const path = CONSTS_PATH_OUT_PATH_TEMP;
-      const file = fileService({ path });
-      file.create();
-      hasBeenGenerated = file.write({ contents });
+      const path = outPath;
+      const outFile = fileService({ path });
+
+      outFile.create();
+      hasBeenGenerated = outFile.write({ contents });
     } catch (error) {
       const { message } = error;
       throw new Error(message);
@@ -46,8 +47,12 @@ export const destinationBrew: IDestination = ({ source }) => {
     let isValid = false;
 
     const data = source.getData();
+
+    /**
+     * @TODO Improve the empty string validation below.
+     */
     const propsMissing = required().filter(
-      (prop) => typeof data[prop] === 'undefined',
+      (prop) => !(typeof data[prop] !== 'undefined' && data[prop] !== ''),
     );
 
     if (propsMissing.length > 0) {

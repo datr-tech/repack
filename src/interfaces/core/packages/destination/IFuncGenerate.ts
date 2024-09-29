@@ -1,5 +1,6 @@
+import { IFuncGenerateInput } from './IFuncGenerateInput';
 import { IFuncGenerateOutput } from './IFuncGenerateOutput';
 
 export interface IFuncGenerate {
-  (): IFuncGenerateOutput;
+  (args: IFuncGenerateInput): IFuncGenerateOutput;
 }
