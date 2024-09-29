@@ -1,0 +1,9 @@
+{
+    "baseDir": ".",
+    "frontMatter": {
+        "projectName": "repack",
+        "repository": "https://github.com/datr-tech/repack",
+        "download": "no",
+        "footer": "no"
+    }
+}

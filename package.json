@@ -12,7 +12,7 @@
     "docs": "npx typedoc --tsconfig ./tsconfig.json --out ./docs ./src/**/*ts ./src/core/**/*.ts ./src/interfaces/**/*.ts",
     "analysis": "npx fta ./",
     "analysis:json": "npm run analysis -- --format json",
-    "clean": "npx rimraf coverage/* dist/*",
+    "clean": "npx rimraf coverage/* docs/* dist/*",
     "lint": "npx eslint --config ./eslint.config.mjs --fix",
     "format:base": "npx prettier --config ./.prettierrc './src/**/*.ts' './test/**/*.ts'",
     "format:check": "npm run format:base -- --check",
@@ -26,7 +26,10 @@
     "test:unit:changed": "npm run test:unit -- -o",
     "test": "npm run test:unit:cov",
     "prepare": "husky",
-    "pre-push": "npx npm-run-all -r lint format test analysis build"
+    "pre-push": "npx npm-run-all -r lint format test analysis build",
+    "lits": "npx lits",
+    "lits-watch": "npx lits --watch",
+    "lits-serve": "npx lits --serve"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.24.7",
@@ -43,6 +46,7 @@
     "fta-cli": "^2.0.0",
     "husky": "^9.1.6",
     "jest": "^29.7.0",
+    "litscript": "^2.1.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
